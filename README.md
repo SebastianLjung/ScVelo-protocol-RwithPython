@@ -1,2 +1,7 @@
 # ScVeloprotocol
-Compiled code for the steps of creating a velocyto .loom file in python, seurat clustering in R, then analysing via ScVelo in python.
+Compiled code for the steps of creating a velocyto .loom file in python, seurat clustering in R, then analysing via ScVelo in python. This was all integrated onto a Rstudio Rmarkdown file using Reticulate environment which allows you to run python commands on Rstudio. This was done to conserve the UMAP clustering used in the Seurat clustering and velocity analysis to allow cross comparison of clusters. The integration of the python code onto rstudio was done as to ease and streamline the process of testing different cluster/filtering arrangements and analysing the resultant velocity UMAPs. Instructions are integrated into the comments but are based on the structure of the cluster at the Babraham Institute, the code based instructions/comments are largely derived from their respective original tutorials
+
+Compilation of code for
+- generating velocity .loom file from possorted.bam to seperate 10x scRNA-seq reads into spliced, unspliced and ambiguous.  Compiled from velocyto (https://velocyto.org/velocyto.py/tutorial/cli.html) 
+- Converting .loom file to a Seurat object for Seurat clustering and analysis then converting it to a .h5ad. Written by Jasmin Stowers using the satija lab tutorial (https://satijalab.org/seurat/articles/pbmc3k_tutorial.html)
+- Converting .h5ad file into Anndata object for scVelo RNA velocity analysis. Compiled from scVelo (https://scvelo.readthedocs.io/)
